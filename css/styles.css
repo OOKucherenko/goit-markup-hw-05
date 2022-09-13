@@ -140,7 +140,7 @@ a {
   backdrop-filter:blur(4px);
   transform: translateY(100%);
   padding: 63px 24px;
-  transition: transform 250ms;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .overlay-desc{
@@ -172,6 +172,20 @@ a {
   letter-spacing: 0.02em;
   color: var(--logo-text);
   /*margin-right: 50px;*/
+}
+
+.icon-blue.current::after{
+  content: '';
+  display: inline-block;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  color: var(--logo-text);
 }
 
 .icon {
